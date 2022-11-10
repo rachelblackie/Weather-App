@@ -65,6 +65,8 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 
 celsiusTemperature = response.data.main.temp;
 
+let celsiusTemperature = null;
+
 function displayFahrenheit(event) {
   event.preventDefault;
   let temperatureElement = document.querySelector("#temperature");
