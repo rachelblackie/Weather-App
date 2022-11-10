@@ -25,7 +25,7 @@ function updateWeather(response) {
   let city = document.querySelector("#city");
   city.innerHTML = response.data.name;
   let temperature = document.querySelector("#temperature");
-  temperature.innerHTML = Math.round(response.data.main.temp) + "°C";
+  temperature.innerHTML = Math.round(response.data.main.temp);
   let humidity = document.querySelector("#humid");
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   let windSpeed = document.querySelector("#wind");
