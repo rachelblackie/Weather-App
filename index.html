@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather App</title>
+    <meta charset="UTF-8" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="src/index.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Type a city.."
+                autofocus="on"
+                autocomplete="off"
+                id="city-input"
+                class="form-control shadow-sm"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm"
+              />
+            </div>
+          </div>
+        </form>
+        <div><button id="current-city">Current City</button></div>
+
+        <h1 id="city">Sydney NSW, Australia</h1>
+        <ul>
+          <li id="date">Wednesday 12:18</li>
+        </ul>
+
+        <div class="col-6">
+          <ul>
+            <li class="temperature" id="temperature">19°</li>
+            <li id="humid">Humidity: 77%</li>
+            <li id="wind">Wind: 8 km/h</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="app"></div>
+    <div>
+      <a href="https://mail.google.com/mail/u/0/#inbox">Open Source Code</a>
+      by Rachel Blackie
+    </div>
+  </body>
+</html>
