@@ -14,52 +14,52 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <form class="search-form" id="search-form">
-          <div class="row">
-            <div class="col-9">
-              <input
-                type="search"
-                placeholder="Type a city.."
-                autofocus="on"
-                autocomplete="off"
-                id="city-input"
-                class="form-control shadow-sm"
-              />
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <form class="search-form" id="search-form">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Type a city.."
+                  autofocus="on"
+                  autocomplete="off"
+                  id="city-input"
+                  class="form-control shadow-sm"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="form-control btn btn-primary shadow-sm"
+                />
+                <button id="current-city" class="btn btn-primary shadow-sm">
+                  Current City
+                </button>
+              </div>
             </div>
-            <div class="col-3">
-              <input
-                type="submit"
-                value="Search"
-                class="form-control btn btn-primary shadow-sm"
-              />
-            </div>
-          </div>
-        </form>
-        <div>
-          <button id="current-city" class="btn btn-primary shadow-sm">
-            Current City
-          </button>
-        </div>
+          </form>
 
-        <h1 id="city"></h1>
-        <ul>
-          <li id="date"></li>
-          <li id="description"></li>
-        </ul>
-
-        <div class="col-6">
+          <h1 id="city"></h1>
           <ul>
-            <li>
-              <strong class="temperature" id="temperature"></strong>
-              <span class="units"
-                ><a href="#" id="celsius-link" class="active">°C</a
-                ><a href="#" id="fahrenheit-link"> °F</a></span
-              >
-            </li>
-            <li id="humid">Humidity: 77%</li>
-            <li id="wind">Wind: 8 km/h</li>
+            <li id="date"></li>
+            <li id="description"></li>
           </ul>
+
+          <div class="col-6">
+            <ul>
+              <li>
+                <strong class="temperature" id="temperature"></strong>
+                <span class="units"
+                  ><a href="#" id="celsius-link" class="active">°C</a
+                  ><a href="#" id="fahrenheit-link"> °F</a></span
+                >
+              </li>
+              <li id="humid">Humidity: 77%</li>
+              <li id="wind">Wind: 8 km/h</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
