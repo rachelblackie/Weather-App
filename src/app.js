@@ -24,7 +24,7 @@ date.innerHTML = `${day} ${hour}:${minute}`;
 function updateWeather(response) {
   let city = document.querySelector("#city");
   city.innerHTML = response.data.name;
-  let temperature = document.querySelector("#temperature");
+  let temperatureElement = document.querySelector("#temperature");
   temperature.innerHTML = Math.round(response.data.main.temp);
   let humidity = document.querySelector("#humid");
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
@@ -73,6 +73,7 @@ function displayFahrenheit(event) {
   let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
 }
+let celsiulLink = document.querySelector("#celsius-link");
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheit);
 let celsiusTemperature = null;
