@@ -83,3 +83,4 @@ searchForm.addEventListener("submit", handleSubmit);
 let celsiusLink = document.querySelector("#celsius-link");
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheit);
+celsiusLink.addEventListener("click", displayCelsius);
