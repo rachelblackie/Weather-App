@@ -23,14 +23,18 @@ date.innerHTML = `${day} ${hour}:${minute}`;
 
 function updateWeather(response) {
   let city = document.querySelector("#city");
-  city.innerHTML = response.data.name;
+  let description = document.querySelector("#description");
   let temperatureElement = document.querySelector("#temperature");
   let humidity = document.querySelector("#humid");
-  humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   let windSpeed = document.querySelector("#wind");
-  windSpeed.innerHTML = `${response.data.wind.speed} km/hr`;
+
   celsiusTemperature = response.data.main.temp;
+
+  city.innerHTML = response.data.name;
+  description.innerHTML = response.data.weather[0].description;
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
+  windSpeed.innerHTML = `${response.data.wind.speed} km/hr`;
 }
 
 function searchCity(city) {
