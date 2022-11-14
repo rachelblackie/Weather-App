@@ -80,7 +80,10 @@ function displayCelsius(event) {
 let celsiusTemperature = null;
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
-let celsiusLink = document.querySelector("#celsius-link");
+
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheit);
+let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsius);
+
+searchCity("Valencia");
