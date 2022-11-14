@@ -30,6 +30,8 @@ function updateWeather(response) {
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   let windSpeed = document.querySelector("#wind");
   windSpeed.innerHTML = `${response.data.wind.speed} km/hr`;
+  celsiusTemperature = response.data.main.temp;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
 function searchCity(city) {
@@ -63,12 +65,6 @@ function getCurrentLocation(event) {
 let currentLocationButton = document.querySelector("#current-city");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-celsiusTemperature = response.data.main.temp;
-
-temperatureElement.innerHTML = Math.round(celsiusTemperature);
-
-let celsiusTemperature = null;
-
 function displayFahrenheit(event) {
   event.preventDefault;
   let temperatureElement = document.querySelector("#temperature");
@@ -79,3 +75,4 @@ function displayFahrenheit(event) {
 }
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheit);
+let celsiusTemperature = null;
