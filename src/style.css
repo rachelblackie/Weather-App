@@ -3,7 +3,9 @@ li {
 }
 #current-city {
   display: inline;
+  width: 500px;
 }
 #search-button {
   display: inline;
+  width: 500px;
 }
