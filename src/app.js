@@ -27,6 +27,7 @@ function updateWeather(response) {
   let temperatureElement = document.querySelector("#temperature");
   let humidity = document.querySelector("#humid");
   let windSpeed = document.querySelector("#wind");
+  let iconElement = document.querySelector("#icon");
 
   celsiusTemperature = response.data.main.temp;
 
@@ -35,6 +36,11 @@ function updateWeather(response) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   windSpeed.innerHTML = `${response.data.wind.speed} km/hr`;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchCity(city) {
