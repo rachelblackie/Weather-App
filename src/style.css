@@ -1,3 +1,54 @@
 li {
   text-transform: capitalize;
 }
+.container {
+  padding: 12px;
+  background-color: #e0fcff;
+}
+.title {
+  text-align: right;
+  margin: 0 auto;
+  color: #404969;
+}
+.main-emoji {
+  font-size: 70px;
+  margin: 0 auto;
+}
+.today-temp {
+  text-align: center;
+  margin: 0 auto;
+}
+.card-title {
+  font-size: 1rem;
+  text-align: center;
+}
+.card-text {
+  text-align: center;
+}
+.weather-icon {
+  font-size: 40px;
+}
+.today-weather {
+  text-align: center;
+  color: #404969;
+}
+.today-temp {
+  font-size: 25px;
+}
+.row {
+  padding: 10px 0px 20px 0px;
+}
+.temperature {
+  text-align: center;
+}
+.weather-summary {
+  margin-bottom: 0%;
+}
+.card-body {
+  background-color: #e0fcff;
+}
+.card-title,
+.card-text,
+.temperature {
+  color: #404969;
+}
