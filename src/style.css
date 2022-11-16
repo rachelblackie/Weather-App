@@ -35,3 +35,6 @@ li {
   border-width: 10px;
   border-color: #43bfc7;
 }
+a:link {
+  color: #43bfc7;
+}
