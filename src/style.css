@@ -1,6 +1,9 @@
 li {
   text-transform: capitalize;
 }
+body {
+  margin: 20px 0 auto;
+}
 .container {
   padding: 12px;
   background: radial-gradient(
@@ -12,7 +15,6 @@ li {
   border-radius: 6px;
   border-color: #43bfc7;
   max-width: 540px;
-  margin: 20px 76px 20px 76px;
 }
 .text {
   color: #cefff1;
