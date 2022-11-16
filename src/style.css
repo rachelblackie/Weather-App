@@ -32,4 +32,6 @@ li {
 #icon {
   width: 150px;
   height: auto;
+  border-width: 10px;
+  border-color: #43bfc7;
 }
