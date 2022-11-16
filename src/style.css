@@ -23,3 +23,8 @@ li {
 #current-city {
   margin: 18px 0px;
 }
+.button:hover {
+  background-color: #69e9f5;
+  color: #40356f;
+  border-color: #43bfc7;
+}
