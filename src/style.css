@@ -11,6 +11,7 @@ li {
   border: 50px;
   border-radius: 6px;
   border-color: #43bfc7;
+  max-width: 540px;
 }
 .text {
   color: #cefff1;
@@ -27,4 +28,7 @@ li {
   background-color: #69e9f5;
   color: #40356f;
   border-color: #43bfc7;
+}
+#icon {
+  size: 200px;
 }
