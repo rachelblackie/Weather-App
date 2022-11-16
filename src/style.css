@@ -3,10 +3,10 @@ li {
 }
 .container {
   padding: 12px;
-  background: linear-gradient(
-    89.7deg,
-    rgb(0, 32, 95) 2.8%,
-    rgb(132, 53, 142) 97.8%
+  background: radial-gradient(
+    circle at 52.1% -29.6%,
+    rgb(144, 17, 105) 0%,
+    rgb(51, 0, 131) 100.2%
   );
 }
 .text {
