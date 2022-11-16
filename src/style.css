@@ -3,14 +3,17 @@ li {
 }
 .container {
   padding: 12px;
-  background-color: #e0fcff;
+  background-color: #27296d;
 }
 .title {
   text-align: right;
   margin: 0 auto;
-  color: #404969;
+  color: #d5def5;
 }
 .main-emoji {
   font-size: 70px;
   margin: 0 auto;
+}
+.text {
+  color: #d5def5;
 }
