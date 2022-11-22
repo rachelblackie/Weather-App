@@ -21,6 +21,11 @@ if (minute < 10) {
 }
 date.innerHTML = `${day} ${hour}:${minute}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = "forecast";
+}
+
 function updateWeather(response) {
   let city = document.querySelector("#city");
   let description = document.querySelector("#description");
@@ -97,3 +102,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsius);
 
 searchCity("Valencia");
+displayForecast();
