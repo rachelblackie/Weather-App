@@ -42,5 +42,5 @@ a {
   color: #69e9f5;
 }
 .weather-forecast {
-  text-align: center;
+  margin: 0 auto;
 }
