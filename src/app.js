@@ -48,7 +48,7 @@ function updateWeather(response) {
   let windSpeed = document.querySelector("#wind");
   let iconElement = document.querySelector("#icon");
 
-  celsiusTemperature = response.data.main.temp;
+  celsiusTemperature = response.data.temperature.current;
 
   city.innerHTML = response.data.city;
   description.innerHTML = response.data.condition.description;
