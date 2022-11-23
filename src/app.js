@@ -21,6 +21,7 @@ if (minute < 10) {
 
   return `${day} ${hours}:${minutes}`;
 }
+date.innerHTML = `${day} ${hour}:${minute}`;
 
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
