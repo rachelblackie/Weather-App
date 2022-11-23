@@ -50,7 +50,7 @@ function updateWeather(response) {
 
   celsiusTemperature = response.data.main.temp;
 
-  city.innerHTML = response.city;
+  city.innerHTML = response.data.city;
   description.innerHTML = response.data.weather[0].description;
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
