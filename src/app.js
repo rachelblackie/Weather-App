@@ -10,7 +10,7 @@ let days = [
   "Friday",
   "Saturday",
 ];
-let day = days[now.getDay()];
+let day = days[date.getDay()];
 let hour = now.getHours();
 if (hour < 10) {
   hour = `0${hour}`;
@@ -18,6 +18,8 @@ if (hour < 10) {
 let minute = now.getMinutes();
 if (minute < 10) {
   minute = `0${minute}`;
+
+  return `${day} ${hours}:${minutes}`;
 }
 date.innerHTML = `${day} ${hour}:${minute}`;
 
