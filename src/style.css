@@ -42,7 +42,7 @@ a {
   color: #69e9f5;
 }
 .row {
-  display: block;
+  display: inline;
 }
 .weather-forecast {
   text-align: center;
