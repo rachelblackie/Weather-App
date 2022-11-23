@@ -45,4 +45,5 @@ a {
 }
 .weather-forecast {
   text-align: center;
+  margin: 0 auto;
 }
