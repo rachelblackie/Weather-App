@@ -29,13 +29,13 @@ function displayForecast() {
     forecastHTML =
       forecastHTML +
       `         
-          <div class="weather-forecast" id="forecast">
+          
               <div class="col-2">
                 <div class="forecast-date text">${day}</div>
                 <div class="forecast-icon">⛅</div>
                 <div class="forecast-temp text">10/20</div>
               </div>
-          </div>`;
+          `;
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
