@@ -51,15 +51,15 @@ function updateWeather(response) {
   celsiusTemperature = response.data.main.temp;
 
   city.innerHTML = response.data.city;
-  description.innerHTML = response.data.weather[0].description;
+  description.innerHTML = response.data.condition.description;
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
-  humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
+  humidity.innerHTML = `Humidity: ${response.data.temperature.humidity}%`;
   windSpeed.innerHTML = `${response.data.wind.speed} km/hr`;
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
-  iconElement.setAttribute("alt", response.data.weather[0].description);
+  iconElement.setAttribute("alt", response.data.condition.description);
 }
 
 function searchCity(city) {
