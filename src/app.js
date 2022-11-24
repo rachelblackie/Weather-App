@@ -77,8 +77,10 @@ function handleSubmit(event) {
 }
 
 function searchLocation(position) {
-  let apiKey = "126244c95t3fo3db4e37613c8eecb30fba3";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}&key=244c95t3fo3db4e37613c8eecb30fba3&units=metric`;
+  let apiKey = "2a2eaa51d996796495bf456e5b58adf4";
+  let lat = postion.coords.latitude;
+  let lon = postion.coords.longitude;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(updateWeather);
 }
 
