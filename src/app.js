@@ -76,7 +76,7 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
-function searchLocation(position) {
+function searchLocation() {
   let apiKey = "2a2eaa51d996796495bf456e5b58adf4";
   let lat = postion.coords.latitude;
   let lon = postion.coords.longitude;
