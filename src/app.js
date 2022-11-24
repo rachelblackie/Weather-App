@@ -22,15 +22,16 @@ if (minute < 10) {
 date.innerHTML = `${day} ${hour}:${minute}`;
 
 function displayForecast() {
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   let days = ["Wed", "Thurs", "Fri", "Sat", "Sun", "Mon"];
-  days.forEach(function (day) {
+  days.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
       `         
         <div class="col-2">
-          <div class="forecast-date text">${day}</div>
+          <div class="forecast-date text">${forecastDay.time}</div>
           <div class="forecast-icon">⛅</div>
           <div class="forecast-temp text">10/20</div>
         </div>
