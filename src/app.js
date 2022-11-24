@@ -43,6 +43,12 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 
+function getForecast(city) {
+  let apiKey = "244c95t3fo3db4e37613c8eecb30fba3";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${44c95t3fo3db4e37613c8eecb30fba3}`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function updateWeather(response) {
   let city = document.querySelector("#city");
   let description = document.querySelector("#description");
@@ -121,4 +127,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsius);
 
 searchCity("Valencia");
-displayForecast();
