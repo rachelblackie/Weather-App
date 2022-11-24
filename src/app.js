@@ -76,10 +76,10 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
-function searchLocation() {
+function searchLocation(position) {
   let apiKey = "2a2eaa51d996796495bf456e5b58adf4";
-  let lat = postion.coords.latitude;
-  let lon = postion.coords.longitude;
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(updateWeather);
 }
