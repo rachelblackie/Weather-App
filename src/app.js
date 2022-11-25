@@ -73,11 +73,11 @@ function updateWeather(response) {
   celsiusTemperature = response.data.temperature.current;
 
   city.innerHTML = response.data.city;
-  dateElement.innerHTML = formatDate(response.time);
-  description.innerHTML = response.condition.description;
+  dateElement.innerHTML = formatDate(response.data.time);
+  description.innerHTML = response.data.condition.description;
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
-  humidity.innerHTML = `Humidity: ${response.temperature.humidity}%`;
-  windSpeed.innerHTML = `${response.wind.speed} km/hr`;
+  humidity.innerHTML = `Humidity: ${response.data.temperature.humidity}%`;
+  windSpeed.innerHTML = `${response.data.wind.speed} km/hr`;
   iconElement.setAttribute(
     "src",
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
