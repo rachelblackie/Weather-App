@@ -45,11 +45,11 @@ function displayForecast(response) {
         <div class="col-2">
           <div class="forecast-date text">${formatDay(forecastDay.time)}</div>
           <div class="forecast-icon">⛅</div>
-          <div class="forecast-temp text"><span class="min-temp">${
+          <div class="forecast-temp text"><span class="min-temp">${Math.round(
             forecastDay.temperature.minimum
-          }</span> / <span class = max-temp>${
+          )}</span> / <span class = max-temp>${Math.round(
           forecastDay.temperature.maximum
-        }</span></div>
+        )}</span></div>
         </div>
           `;
     }
