@@ -1,27 +1,34 @@
-let now = new Date();
-now.getDate();
-let date = document.querySelector("#date");
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[now.getDay()];
-let hour = now.getHours();
-if (hour < 10) {
-  hour = `0${hour}`;
-}
-let minute = now.getMinutes();
-if (minute < 10) {
-  minute = `0${minute}`;
-}
-date.innerHTML = `${day} ${hour}:${minute}`;
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
 
-function formatDay(timestamp) {}
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
+}
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
 
 function displayForecast(response) {
   let forecast = response.daily;
@@ -33,9 +40,13 @@ function displayForecast(response) {
         forecastHTML +
         `         
         <div class="col-2">
-          <div class="forecast-date text">${forecastDay.time}</div>
+          <div class="forecast-date text">${formatDay(forecastDay.time)}</div>
           <div class="forecast-icon">⛅</div>
-          <div class="forecast-temp text"><span class="min-temp">${forecastDay.temperature.minimum}</span> / <span class = max-temp>${forecastDay.temperature.maximum}</span></div>
+          <div class="forecast-temp text"><span class="min-temp">${
+            forecastDay.temperature.minimum
+          }</span> / <span class = max-temp>${
+          forecastDay.temperature.maximum
+        }</span></div>
         </div>
           `;
     }
