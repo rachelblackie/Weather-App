@@ -63,7 +63,7 @@ function getForecast(coordinates) {
 
 function updateWeather(response) {
   let city = document.querySelector("#city");
-  let dateElement = document.querySelector("date");
+  let dateElement = document.querySelector("#date");
   let description = document.querySelector("#description");
   let temperatureElement = document.querySelector("#temperature");
   let humidity = document.querySelector("#humid");
