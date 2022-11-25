@@ -47,9 +47,9 @@ function displayForecast(response) {
           <div class="forecast-icon">⛅</div>
           <div class="forecast-temp text"><span class="min-temp">${Math.round(
             forecastDay.temperature.minimum
-          )}</span> / <span class = max-temp>${Math.round(
+          )}</span>° / <span class = max-temp>${Math.round(
           forecastDay.temperature.maximum
-        )}</span></div>
+        )}</span>°</div>
         </div>
           `;
     }
