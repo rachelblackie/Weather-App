@@ -24,6 +24,7 @@ date.innerHTML = `${day} ${hour}:${minute}`;
 function formatDay(timestamp) {}
 
 function displayForecast(response) {
+  alert(response.data);
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
