@@ -47,3 +47,6 @@ a {
   text-align: center;
   margin: 0 auto;
 }
+.forecast-temp {
+  font-size: 9px;
+}
