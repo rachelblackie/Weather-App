@@ -44,7 +44,9 @@ function displayForecast(response) {
         `         
         <div class="col-2">
           <div class="forecast-date text">${formatDay(forecastDay.time)}</div>
-          <div class="forecast-icon">⛅</div>
+          <div class="forecast-icon"><img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+            forecastDay.condition.icon
+          }.png" alt="${forecastDay.condition.description}" /></div>
           <div class="forecast-temp text"><span class="min-temp">${Math.round(
             forecastDay.temperature.minimum
           )}</span>° / <span class = max-temp>${Math.round(
