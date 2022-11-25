@@ -21,6 +21,8 @@ if (minute < 10) {
 }
 date.innerHTML = `${day} ${hour}:${minute}`;
 
+function formatDay(timestamp) {}
+
 function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
@@ -42,10 +44,10 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 
-function getForecast(coordinates) {
+function getForecast(response) {
   let apiKey = "244c95t3fo3db4e37613c8eecb30fba3";
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=244c95t3fo3db4e37613c8eecb30fba3`;
-  axios.get(apiUrl).then(displayForecast);
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${response.data.city}&key=244c95t3fo3db4e37613c8eecb30fba3`;
+  axios.get(apiUrl).then(displayForecast(response));
 }
 
 function updateWeather(response) {
@@ -69,7 +71,7 @@ function updateWeather(response) {
   );
   iconElement.setAttribute("alt", response.data.condition.description);
 
-  getForecast(response.data.city);
+  getForecast(response);
 }
 
 function searchCity(city) {
