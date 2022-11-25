@@ -34,7 +34,7 @@ function displayForecast(response) {
         <div class="col-2">
           <div class="forecast-date text">${forecastDay.time}</div>
           <div class="forecast-icon">⛅</div>
-          <div class="forecast-temp text">10/20</div>
+          <div class="forecast-temp text"><span class="min-temp">${forecastDay.temperature.minimum}</span>/<span class = max-temp>${forecastDay.temperature.maximum}</span></div>
         </div>
           `;
     }
@@ -69,6 +69,8 @@ function updateWeather(response) {
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
   iconElement.setAttribute("alt", response.data.condition.description);
+
+  getForecast();
 }
 
 function searchCity(city) {
