@@ -63,7 +63,6 @@ function getForecast(coordinates) {
 
 function updateWeather(response) {
   let city = document.querySelector("#city");
-  let dateElement = document.querySelector("#date");
   let description = document.querySelector("#description");
   let temperatureElement = document.querySelector("#temperature");
   let humidity = document.querySelector("#humid");
@@ -73,7 +72,6 @@ function updateWeather(response) {
   celsiusTemperature = response.data.temperature.current;
 
   city.innerHTML = response.data.city;
-  dateElement.innerHTML = formatDate(response.data.time);
   description.innerHTML = response.data.condition.description;
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   humidity.innerHTML = `Humidity: ${response.data.temperature.humidity}%`;
