@@ -70,7 +70,7 @@ function updateWeather(response) {
   );
   iconElement.setAttribute("alt", response.data.condition.description);
 
-  getForecast();
+  getForecast(response.data.city);
 }
 
 function searchCity(city) {
