@@ -54,3 +54,6 @@ a {
   width: 80%;
   height: auto;
 }
+.forecast-row {
+  padding: 20px;
+}
