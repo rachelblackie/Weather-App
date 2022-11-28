@@ -54,6 +54,10 @@ a {
   width: 80%;
   height: auto;
 }
-.author {
-  padding-top: 20px;
+.forecast-row {
+  padding: 20px;
+}
+.max-temp {
+  font-weight: bold;
+  color: #43bfc7;
 }
