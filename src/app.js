@@ -75,12 +75,10 @@ function updateWeather(response) {
   let windSpeed = document.querySelector("#wind");
   let iconElement = document.querySelector("#icon");
 
-  celsiusTemperature = response.data.temperature.current;
-
   city.innerHTML = response.data.city;
   dateElement.innerHTML = formatDate(response.data.time * 1000);
   description.innerHTML = response.data.condition.description;
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  temperatureElement.innerHTML = Math.round(response.data.temperature.current);
   humidity.innerHTML = `Humidity: ${response.data.temperature.humidity}%`;
   windSpeed.innerHTML = `${response.data.wind.speed} km/hr`;
   iconElement.setAttribute(
